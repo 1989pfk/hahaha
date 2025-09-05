@@ -42,29 +42,23 @@ vipdest = "192.168.15.156"
 # command = [vcommand, vuser, varrouba, vipsource, vdoublepoint, vph1path1, vvmpath1]
 command = ['rsync', '-avz', vuser, varrouba, vipsource, vdoublepoint, vph1path1, vvmpath1]
 
-print(command)
+#print(command)
 
-# try:
-#     result = subprocess.run(
-#         command,
-#         check=True,  # Raises an exception if the command fails
-#         capture_output=True, # Captures stdout and stderr
-#         text=True # Decodes output as text
-#     )
-#     print("rsync completed successfully.")
-#     print("Stdout:", result.stdout)
-#     print("Stderr:", result.stderr)
-
-# except subprocess.CalledProcessError as e:
-#     print("rsync failed.")
-#     print("Return code:", e.returncode)
-#     print("Stdout:", e.stdout)
-#     print("Stderr:", e.stderr)
-
-
-
-
-
+try:
+    result = subprocess.run(
+        command,
+        check=True,  # Raises an exception if the command fails
+        capture_output=True, # Captures stdout and stderr
+        text=True # Decodes output as text
+    )
+    print("rsync completed successfully.")
+    print("Stdout:", result.stdout)
+    print("Stderr:", result.stderr)
+except subprocess.CalledProcessError as e:
+    print("rsync failed.")
+    print("Return code:", e.returncode)
+    print("Stdout:", e.stdout)
+    print("Stderr:", e.stderr)
 
 
 
