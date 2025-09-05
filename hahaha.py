@@ -13,5 +13,3 @@ for i in range(100):
     time.sleep(0.01)
 
 st.success('Task complete!')    
-
-st.balloons()
